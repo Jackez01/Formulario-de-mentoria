@@ -4,6 +4,10 @@
   box-sizing: 0;
 }
 
+body, input {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   background: #EFEFEF;
 }
@@ -35,6 +39,7 @@ header h1 {
   font-size: 48px;
   font-weight: bold;
   color: white;
+
   margin-bottom: 18px;
 }
 
@@ -50,4 +55,114 @@ form {
   border-radius: 10px 10px 0 0;
   min-height: 400px;
 
+  padding: 64px;
+
+  /*essa parte de baixo é referente aos espaçamentos do titulos, como ele estão dentro do form isso se 
+  aplicará para todos*/
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+/* serve para tirar a borda que vem por padrão*/
+fieldset {
+  border: none;
+  gap: 16px;
+}
+
+/* Precisei criar a div fieldset-wrapper pois existe um bug em alguns navegadores, dessa forma consegui criar
+um gap entre as linhas do formulário*/
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+fieldset legend {
+  font-family: "Staatliches", sans-serif;
+  margin-bottom: 36px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+
+  border-bottom: 1px solid #E6E6F0;
+  padding-bottom: 16px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #4E4958;
+
+  margin-bottom: 8px;
+}
+
+
+.input-wrapper span {
+  font-size: 12px;
+  line-height: 20px;
+
+  color: #d1ccdd;
+}
+
+/* esse hover serve para quando passar o mouse em cima do span ele dar uma escurecida na cor, dessa forma, fica mais visivel
+(acessibilidade)*/
+.input-wrapper label span:hover {
+  color: #938da0;
+}
+
+.input-wrapper input {
+  background: #FAFAFC;
+
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+
+  height: 56px;
+  padding: 0 24px;
+
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #C1BCCC;
+}
+
+.col-2 {
+  display: flex;
+  gap: 22px;
+}
+
+/* isso serve para dar o espaçmento na primeira div do agrupamento selecionado fazendo ele 
+preencher mais do que os outros ao lado */
+.col-2 > div:nth-child(1) {
+  width: 59%;
+}
+
+
+p {
+  font-family: "Staatliches", sans-serif;
+  font-size: 20px;
+}
+
+.col-3 {
+  display: flex;
+  gap: 32px;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 100%;
+}
+
+.col-4 {
+  display: flex;
+  gap: 32px;
+}
+
+.col-4 > div:nth-child(1) {
+  width: 100%;
 }
