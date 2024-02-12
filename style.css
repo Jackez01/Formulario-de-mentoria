@@ -157,12 +157,3 @@ p {
 .col-3 > div:nth-child(1) {
   width: 100%;
 }
-
-.col-4 {
-  display: flex;
-  gap: 32px;
-}
-
-.col-4 > div:nth-child(1) {
-  width: 100%;
-}
